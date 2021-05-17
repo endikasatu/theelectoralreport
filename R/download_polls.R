@@ -16,7 +16,7 @@
 #' @import dplyr
 #' @import janitor
 #' @import stringr
-#' @import magittr
+#' @import magrittr
 #'
 #' @export
 
