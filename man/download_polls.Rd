@@ -25,7 +25,3 @@ Dataframe con los datos de las encuestas especificadas.
 \description{
 Esta función descarga las encuestas recopiladas por TheElectoralReport en función de los filtros escogidos y los guarda en un directorio especificado.
 }
-\examples{
-df <- download_polls(tipo = "generales", pollster = "CIS", dir = "tu_direcciÃ³n")
-
-}
