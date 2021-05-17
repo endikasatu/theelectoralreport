@@ -16,7 +16,7 @@
 #' @import dplyr
 #' @import janitor
 #' @import stringr
-#' @import tidyverse
+#' @importFrom magrittr %>%
 #'
 #' @export
 
@@ -143,8 +143,6 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
 
      path <- paste0(dir, "/", "df_polls.csv")
      write.csv(df_encuestas, path)
-
-     return(df_encuestas)
 
      }
 }
