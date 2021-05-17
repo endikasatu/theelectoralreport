@@ -9,8 +9,6 @@
 #' @param pollster Encuestadora y medio de comunicación que publica la encuesta.
 #' @param dir La ruta a la carpeta donde se quiere guardar la descarga.
 #'
-#' @examples df <- download_polls(tipo = "generales", pollster = "CIS", dir = "tu_dirección")
-#'
 #' @return Dataframe con los datos de las encuestas especificadas.
 #'
 #' @import dplyr
