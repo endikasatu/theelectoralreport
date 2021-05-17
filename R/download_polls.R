@@ -16,6 +16,7 @@
 #' @import dplyr
 #' @import janitor
 #' @import stringr
+#' @import magittr
 #'
 #' @export
 
@@ -51,7 +52,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
      tipo <- toupper(tipo)
    } else {
      tipo<- ""
-     cat("ATENCIÓN!!!!! No hay coincidencias de la Encuestadora indicada")
+     cat("ATENCIÓN!!!!! No hay coincidencias con el tipo de elecciones indicado. Pueden ser 'generales', 'autonomicas' o 'municipales'")
    }
 
    ## Municipio
@@ -67,7 +68,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
      mun <- toupper(mun)
    } else {
      mun<- ""
-     cat("ATENCIÓN!!!!! No hay coincidencias de la Encuestadora indicada")
+     cat("ATENCIÓN!!!!! No hay coincidencias en el Municipio indicado.")
    }
 
    ## Provincia
@@ -83,7 +84,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
      prov <- toupper(prov)
    } else {
      prov<- ""
-     cat("ATENCIÓN!!!!! No hay coincidencias de la Encuestadora indicada")
+     cat("ATENCIÓN!!!!! No hay coincidencias en la Provincia indicada.")
    }
 
    ## CCAA
@@ -99,8 +100,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
    } else {
 
      ccaa<- ""
-     cat("ATENCIÓN!!!!! No hay coincidencias de la CCAA. Puede probar con:")
-     cat(unique(encuestas$Literal))
+     cat("ATENCIÓN!!!!! No hay coincidencias en la CCAA indicada.")
    }
 
    ## Encuestadora/Medio
@@ -116,7 +116,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
      pollster <- toupper(pollster)
    } else {
      pollster<- ""
-     cat("ATENCIÓN!!!!! No hay coincidencias de la Encuestadora indicada")
+     cat("ATENCIÓN!!!!! No hay coincidencias de la Encuestadora/Medio indicada.")
      }
 
    # Crear dataframe con los filtros asignados
@@ -134,7 +134,7 @@ download_polls <- function(tipo = "", ccaa = "", prov = "", mun = "", pollster =
 
    if (nrow(df_encuestas) < 1) {
 
-     cat("ATENCIÓN!!!!! No se han encontrado coincidencias")
+     cat("ATENCIÓN!!!!! No se han encontrado coincidencias.")
      df_encuestas<- NULL
 
    } else {
