@@ -14,7 +14,6 @@
 #' @import dplyr
 #' @import janitor
 #' @import stringr
-#' @importFrom magrittr %>%
 #'
 #' @export
 
