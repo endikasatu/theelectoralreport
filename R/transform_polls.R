@@ -12,7 +12,6 @@
 #' @import lubridate
 #'
 #' @export
-#'
 
 transform_polls <- function(data = "", .eday = ""){
 
