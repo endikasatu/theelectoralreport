@@ -7,7 +7,6 @@
 #'
 #' @return Dataframe preparado con datos de las encuestas.
 #'
-#' @import tidyverse
 #' @import dplyr
 #' @import lubridate
 #'
